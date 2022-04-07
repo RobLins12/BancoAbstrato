@@ -18,14 +18,13 @@ public class ContaCorrente extends ContaBancaria implements Interface{
     }
 
     @Override
-    public boolean sacar(double valor) { 
+    public boolean sacar(double valor) throws Exception{ 
 
         valor = valor - (valor * taxaDeOperacao);
         
         if (valor > this.saldo){
-            return false;
+            throw new Exception("Saldo insuficiente");
         } else {
-            
             this.saldo -= valor;
             return true;
         }

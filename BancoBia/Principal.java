@@ -7,7 +7,11 @@ public class Principal {
 
 
         contaCorrente.depositar(100);
-        contaCorrente.sacar(45);
+        try {
+            contaCorrente.sacar(130);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
 
         System.out.println("oi seu saldo é:" + contaCorrente.saldo);
 

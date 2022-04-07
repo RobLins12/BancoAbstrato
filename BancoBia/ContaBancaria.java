@@ -4,7 +4,11 @@ public abstract class ContaBancaria{
     protected int numeroDaConta;
     protected double saldo;
 
-    abstract public boolean sacar (double valor);
+    public void transferir(double valor, ContaBancaria c) throws Exception{
+        this.sacar(valor);
+        c.depositar(valor);
+    }
+    abstract public boolean sacar (double valor) throws Exception;
     abstract public void depositar (double valor);
 
 }
