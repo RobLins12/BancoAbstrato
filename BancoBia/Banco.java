@@ -21,7 +21,11 @@ public class Banco implements Interface{
     }
 
     @Override
-    public double mostraDados() {
-        return 0;
+    public void mostraDados() {
+        for (ContaBancaria contaBancaria : contas) {
+            System.out.println("Conta:");
+            System.out.println("Numero da conta = " + contaBancaria.numeroDaConta);
+            System.out.println("Saldo = " +contaBancaria.saldo);
+        } 
     }
 }

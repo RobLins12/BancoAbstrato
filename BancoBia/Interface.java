@@ -2,6 +2,6 @@ package BancoBia;
 
 public interface Interface {
 
-    public double mostraDados();
+    public void mostraDados();
 
 }

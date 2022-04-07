@@ -2,6 +2,10 @@ package BancoBia;
 
 public class ContaPoupanca extends ContaBancaria implements Interface{
    
+    public ContaPoupanca(int numero) {
+        super(numero);
+    }
+
     private double limite = 20;
 
     @Override
@@ -10,8 +14,8 @@ public class ContaPoupanca extends ContaBancaria implements Interface{
     }
         
     @Override
-    public double mostraDados() {
-       return this.limite;
+    public void mostraDados() {
+       System.out.println(this.limite); 
     }
 
     @Override

@@ -2,6 +2,10 @@ package BancoBia;
 
 public class ContaCorrente extends ContaBancaria implements Interface{
 
+    public ContaCorrente(int numero) {
+        super(numero);
+    }
+
     private double taxaDeOperacao = 0.1;
 
     @Override
@@ -13,8 +17,8 @@ public class ContaCorrente extends ContaBancaria implements Interface{
     }
         
     @Override
-    public double mostraDados() {
-       return this.taxaDeOperacao;
+    public void mostraDados() {
+       System.out.println(this.taxaDeOperacao);
     }
 
     @Override
